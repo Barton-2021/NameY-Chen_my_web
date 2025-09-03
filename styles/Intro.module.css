@@ -1,9 +1,10 @@
 .container {
   width: 100%;
-  height: calc(100vh - 50px);
+  height: calc(100vh - 30px);
   display: flex;
   overflow: hidden;
   position: relative;
+  margin-top:50px;
 }
 
 .card {
@@ -12,7 +13,7 @@
   padding-right: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   position: relative;
 }
 
@@ -39,15 +40,33 @@
 .title {
   font-size: 50px;
   margin: 0;
+  min-height: 120px; /* 设置最小高度保持布局稳定 */
 }
 
 .brandName {
   color: green;
+  display: inline-block;
+  animation: bounce 1s ease infinite;
+}
+
+.typewriter {
+  display: inline-block;
+  min-height: 60px; /* 保持高度稳定 */
 }
 
 .desc {
-  font-size: 20px;
+  font-size: 23px;
+  font-weight: bold;
   margin: 0;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 .button {
@@ -55,11 +74,13 @@
   background-color: green;
   color: white;
   font-weight: bold;
+  font-size: 24px;
   padding: 20px;
   border-radius: 10px;
-  width: 100px;
+  width: 200px;
   cursor: pointer;
   animation: button 1s ease infinite alternate;
+  margin-top: 50px;
 }
 
 @keyframes button {
@@ -79,7 +100,7 @@
   }
 
   .card {
-    padding: 50px;
+    padding: 100px;
     align-items: center;
     text-align: center;
     justify-content: space-between;
@@ -87,6 +108,11 @@
 
   .title {
     font-size: 30px;
+    min-height: auto;
+  }
+  
+  .typewriter {
+    min-height: auto;
   }
 
   .desc {

@@ -1,3 +1,10 @@
+/*
+ * @Author: Chen_陈工
+ * @Date: 2025-08-27 17:13:51
+ * @LastEditors: Do not edit
+ * @LastEditTime: 2025-09-04 01:05:10
+ * @FilePath: \NameY-Chen_my_web\styles\Services.module.css
+ */
 .container {
   padding: 0px 100px;
 }
@@ -17,11 +24,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 20px; /* 添加间距 */
 }
 
 .service {
-  width: 500px;
-  height: 500px;
+  width: calc(50% - 100px); /* 占据一半宽度，减去间距的一半 */
+  height: 700px;
   background-color: whitesmoke;
   padding: 10px;
   display: flex;
@@ -30,6 +38,8 @@
   position: relative;
   margin-bottom: 50px;
   cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .catInfo {
@@ -92,7 +102,7 @@
   }
 
   .service {
-    width: 300px;
+    width: calc(100% - 20px);
     height: 300px;
   }
 }

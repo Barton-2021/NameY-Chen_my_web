@@ -5,9 +5,9 @@ import Link from "next/link";
 const Services = ({ services }) => {
   return (
     <div className={style.container}>
-      <div className={style.info}>
-        <h1 className={style.title}>What We Can Do?</h1>
-        <h1 className={style.subtitle}>Services we can help you with</h1>
+      <div id="what-we-can-do" className={style.info}>
+        <h1 className={style.title}>风 · 服务提供</h1>
+        <h1 className={style.subtitle}>我可以提供的服务领域</h1>
         <div className={style.services}>
           {services.map((service) => (
             <Link key={service.id} href={`/products/${service.name}`} passHref>

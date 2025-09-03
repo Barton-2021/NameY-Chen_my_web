@@ -15,6 +15,12 @@ a {
   box-sizing: border-box;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .circle {
   width: 100vh;
   height: 100vh;
@@ -29,5 +35,16 @@ a {
 @media screen and (max-width: 480px) {
   .circle {
     display: none;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
